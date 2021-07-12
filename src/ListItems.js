@@ -15,7 +15,7 @@ import GroupWorkIcon from '@material-ui/icons/GroupWork';
 export const mainListItems = (
     <div>
         <ListSubheader inset>My School</ListSubheader>        
-        <ListItem button>
+        <ListItem button onClick={() => alert('add routing')}>
             <ListItemIcon>
                 <AddCircleIcon />
             </ListItemIcon>
