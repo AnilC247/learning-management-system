@@ -19,6 +19,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './ListItems';
+import AddCourse from './AddCourse/AddCourse';
 
 function Copyright() {
   return (
@@ -111,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 240,
+    height: 650,
   },
 }));
 
@@ -173,7 +174,7 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={12} lg={12}>
               <Paper className={fixedHeightPaper}>
-                {/* <Courses /> */}
+                <AddCourse />
               </Paper>
             </Grid>
           </Grid>
