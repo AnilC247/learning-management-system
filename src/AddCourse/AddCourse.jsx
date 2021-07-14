@@ -111,7 +111,7 @@ export default function AddCourse() {
                       color="primary"
                       className={classes.button}
                     >
-                      {isLastStep ? 'Place order' : 'Next'}
+                      {isLastStep ? 'Finish' : 'Next'}
                     </Button>
                     {isSubmitting && (
                       <CircularProgress
