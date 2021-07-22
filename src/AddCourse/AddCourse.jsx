@@ -14,7 +14,7 @@ import CourseSlugForm from '../Forms/CourseSlugForm';
 import CoursePriceForm from '../Forms/CoursePriceForm';
 import CourseDescriptionForm from '../Forms/CourseDescriptionForm';
 
-// import CheckoutSuccess from './CheckoutSuccess';
+import SuccessView from './SuccessView';
 
 import addCourseFormModel from '../FormModel/addCourseFormModel';
 import formInitialValues from '../FormModel/formInitialValues';
@@ -42,7 +42,7 @@ function _renderStepContent(step) {
 export default function AddCourse() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
-//   const currentValidationSchema = validationSchema[activeStep];
+  const [formValues, setFormValues] = useState({});
   const isLastStep = activeStep === steps.length - 1;
 
   function _sleep(ms) {
@@ -50,7 +50,8 @@ export default function AddCourse() {
   }
 
   async function _submitForm(values, actions) {
-    await _sleep(1000);
+    setFormValues(values);
+    await _sleep(6000);
     alert(JSON.stringify(values, null, 2));
     actions.setSubmitting(false);
 
@@ -85,12 +86,10 @@ export default function AddCourse() {
       </Stepper>
       <React.Fragment>
         {activeStep === steps.length ? (
-          /* <CheckoutSuccess /> */
-          <h1>success msg </h1>
+          <SuccessView formValues={formValues}/>
         ) : (
           <Formik
             initialValues={formInitialValues}
-            // validationSchema={currentValidationSchema}
             onSubmit={_handleSubmit}
           >
             {({ isSubmitting }) => (

@@ -12,10 +12,12 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 import GroupWorkIcon from '@material-ui/icons/GroupWork';
 
+import history from './history';
+
 export const mainListItems = (
     <div>
         <ListSubheader inset>My School</ListSubheader>        
-        <ListItem button onClick={() => alert('add routing')}>
+        <ListItem button onClick={() => history.push('/AddCourse')}>
             <ListItemIcon>
                 <AddCircleIcon />
             </ListItemIcon>

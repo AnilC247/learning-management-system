@@ -17,7 +17,7 @@ export default makeStyles(theme => ({
   },
   buttonProgress: {
     position: 'absolute',
-    top: '50%',
-    left: '50%'
+    top: '12%',
+    left: '45%'
   }
 }));

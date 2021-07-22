@@ -1,7 +1,6 @@
 import React from 'react';
-import { Grid, Typography, Button, Box } from '@material-ui/core';
+import { Grid, Typography, Box } from '@material-ui/core';
 import InputField from '../FormFields/InputFields';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import descImg from '../assets/images/desc.jpeg';
 
 export default function CourseDescriptionForm(props) {
