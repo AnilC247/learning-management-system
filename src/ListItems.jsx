@@ -23,7 +23,7 @@ export const mainListItems = (
             </ListItemIcon>
             <ListItemText primary="Add Course" />
         </ListItem>
-        <ListItem button>
+        <ListItem button onClick={() => history.push('/Courses')}> 
             <ListItemIcon>
                 <MenuBookIcon />
             </ListItemIcon>

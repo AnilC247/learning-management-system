@@ -175,7 +175,6 @@ export default function Main() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={12} lg={12}>
               <Paper className={fixedHeightPaper}>
-                {/* <h1>Main</h1> */}
                 <Routes />            
               </Paper>
             </Grid>
